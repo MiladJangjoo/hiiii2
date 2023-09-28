@@ -1,3 +1,4 @@
 .env
 handyman-services/
 __pycache__/
+migrations/

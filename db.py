@@ -3,6 +3,9 @@ users = {
         'username':'miladjangjoo',
         'email':'miladjangjooo@gmail.com',
         'password':'12345678',
+        'phone_number' : '1245687512',
+        'address' : "houston tx",
+        "required_services" : "assembly",
         'subscribtion':'yes',
         'numtaskdone':'5'
         
@@ -11,6 +14,9 @@ users = {
         'username':'tarasharafat',
         'email':'tara@gmail.com',
         'password':'9876543',
+        'phone_number' : '1245687512',
+        'address' : "houston tx",
+        "required_services" : "assembly",
         'subscribtion':'no',
         'numtaskdone':'2'
         
