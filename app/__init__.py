@@ -19,5 +19,6 @@ api.register_blueprint(review_bp)
 
 from resources.users import routes
 from resources.reviews import routes
-from resources.users.UserModel import UserModel
+from resources.users.models import UserModel
+from resources.reviews.ReviewModel import ReviewModel
 
