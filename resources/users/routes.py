@@ -2,7 +2,7 @@
 from flask.views import MethodView
 from flask_smorest import abort
 from sqlalchemy.exc import IntegrityError
-from schemas import UplateUserSchema, UserSchema, ReviewSchema, DeleteuserSchema, UserSchemaNested
+from schemas import UplateUserSchema, UserSchema, ReviewSchema, AutheuserSchema, UserSchemaNested
 from . import bp
 from .models import UserModel
 
@@ -16,18 +16,9 @@ class UserList(MethodView):
         users = UserModel.query.all()
         return users
 
-    @bp.arguments(UserSchema)
-    @bp.response(201, UserSchema)
-    def post(self, user_data):
-        user = UserModel()
-        user.from_dict(user_data)
-        try:
-            user.save()
-            return user_data
-        except IntegrityError:
-            abort(400, message= "username or email already taken")
+   
 
-    @bp.arguments(DeleteuserSchema)
+    @bp.arguments(AutheuserSchema)
     def delete(self, user_data):
         user= UserModel.query.filter_by(username = user_data['username']).first()
         if user and user.check_password(user_data['password']):

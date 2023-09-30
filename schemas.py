@@ -5,7 +5,7 @@ from marshmallow import Schema, fields
 class ReviewSchema(Schema):
     id = fields.Str(dump_only = True)
     body = fields.Str(required= True)
-    user_id = fields.Int(required= True)
+    user_id = fields.Int(dump_only = True)
     timestamp = fields.Str(dump_only=True)
 
 class UserSchema(Schema):
@@ -35,6 +35,7 @@ class UplateUserSchema(Schema):
     Phone_number = fields.Str()
     required_services = fields.Str()
 
-class DeleteuserSchema (Schema):
-    username = fields.Str(required = True)
+class AutheuserSchema (Schema):
+    username = fields.Str()
+    email = fields.Str()
     password = fields.Str(required = True, load_only = True)
