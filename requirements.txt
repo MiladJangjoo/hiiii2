@@ -9,6 +9,7 @@ Flask-Migrate==4.0.5
 flask-smorest==0.42.1
 Flask-SQLAlchemy==3.1.1
 greenlet==2.0.2
+gunicorn==21.2.0
 itsdangerous==2.1.2
 Jinja2==3.1.2
 Mako==1.2.4
